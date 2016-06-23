@@ -1,55 +1,39 @@
-# Installation
+## Learning Objectives
 
-#### Prerequisites
+After completing this assignment, you should:
 
-Make sure you have an up to date installation of `npm`
-with `brew update` followed by either `brew install npm` or `brew upgrade npm`.
+* Have a deep understanding of layout
+* Understand jQuery DOM Manipulation
+* Demonstrate strong ability to navigate through a large block of JSON data
+* Understand and be able to use JavaScript templates
 
-Then use npm to install the following apps with `npm install -g $APP_NAME`
-* `gulp-cli`
-* `surge`
+## Deliverables
 
-Finally, I would strongly encourage you to install the `newapp` script from [here][newapp].
+1. Push to Github and provide me a URL to your repo
+2. Deploy to Surge and make sure that URL is in your description or `Readme.md` file
 
-[newapp]: https://gist.github.com/kingcons/a25733c233faf10847cbb4ff557e6843
+## Normal Mode
 
-# Usage
+Re-Create an Etsy Search Page - [https://www.etsy.com/search?q=whiskey](https://www.etsy.com/search?q=whiskey)
 
-#### If you are using the `newapp` tool
+1. Utilize the data for whatever search term you use - [DATA HERE](https://api.etsy.com/v2/listings/active?api_key=h9oq2yf3twf4ziejn10b717i&keywords=whiskey&includes=Images,Shop)
+2. You are free to change the search term to whatever you'd like.
+3. We haven't covered how to fetch data using JavaScript, so just copy the data and store it in a variable and separate file.
+4. Everything should be styled as closely as possible, including the Header/Sidebar/Links/Search (you can ignore the footer, dropdowns & refine your search area)
+5. You should implement hover events and link the items to their proper Etsy product pages (items only, other links can be just linked to `#`)
+6. No need to make any of the form elements work, just style them properly
+7. You can ignore the "Top categories for ..." section as that is not in the data.
 
-*NOTE:* If you do not use a lowercased project/folder name, the automatic deploy to surge with `npm run deploy` will fail as surge.sh always expects lowercased names.
+* Pro Tip, worry about the structure first, the JS second and the fine details of the design last
+* Note: (heart, cart and hamburger icons) are in an assets folder below.
+* [assets.zip](https://tiy-learn-content.s3.amazonaws.com/7e235a6a-assets.zip) (4 KB)
+* [Example Mockup](https://tiy-learn-content.s3.amazonaws.com/2f53270d-5df680fe-etsy-mockup.jpg)
 
-1. Run `$ newapp template <project name>`
-2. Change in to your new project
-3. Initialize Git `$ git init`
-4. Build
+## Hard Mode
 
-#### If you are NOT using the `newapp` tool
+1. Create your own API token by signing up as an [Etsy developer](https://www.etsy.com/developers/)
+2. Get the categories from the data to create the sidebar, with correct links and program the "Refine your search" area.
 
-1. Clone down this repo
-2. Rename and change into the project folder
-3. Remove `git` from it `$ rm -rf .git`
-4. Initialize Git `$ git init`
-5. Install the dependencies `$ npm install`
-6. Build 
+## Nightmare Mode
 
-
-# Features
-
-This template features a couple different tools. First it utalizes both NPM and Gulp for different tasks.
-
-## Gulp Tasks
-
-All tasks are listed below, but ideally you will just need to run `gulp start` and be done with it.
-
-- `gulp start`: This is the primary task that will fire up the server and allow you to start building
-- `gulp server`: This will start a Browsersync server with live-reload
-- `gulp sass`: This will compile your SASS
-- `gulp browserify`: This will transpile your JS from ES6 to ES5
-- `gulp watch`: This will start a watcher for files
-
-## NPM Scripts
-
-- `npm run test`: This will launch Mocha in your terminal and run any tests
-- `npm run deploy`: This will deploy your application to Surge.sh for you
-- `npm run lint`: This will run ESLint on your `/src/js` folder
+1. Implement the sorting dropdown so that when you change the sort method the items will reload into a different order.
