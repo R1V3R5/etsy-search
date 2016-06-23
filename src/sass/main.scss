@@ -34,8 +34,10 @@ nav.content {
 }
 .container {
   background: rgb(245, 245, 241);
-  height: 1850px;
+  min-height: 1850px;
   margin: 0px;
+  display: -webkit-flex;
+  display: flex;
 }
 footer {
   height: 300px;
@@ -48,12 +50,33 @@ footer {
   background: white;
   margin-left: 35px;
   // margin-top: 60px;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  ul {
+    list-style: none;
+  }
+
 }
 .results-head {
   height: 55px;
 }
 .item-grid {
+  float: left;
   width: 260px;
   height: 250px;
   border: .5px solid black;
+  margin: 10px;
+  .pic {
+    height: 203px;
+    border-bottom: .5px solid black;
+  }
+  .info {
+    height: 47px;
+  }
+}
+.flex-column {
+  -webkit-flex: 1;
+          flex: 1;
 }
