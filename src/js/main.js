@@ -4,7 +4,6 @@ import {
 }
 from './etsy';
 
-// console.log(items)
 
 var etsyItems = items.results.map(function(item) {
   return {
@@ -15,44 +14,22 @@ var etsyItems = items.results.map(function(item) {
     image: item.Images[0].url_170x135,
     price: item.price
   };
-})
-console.log(etsyItems)
-
-
-/*
-
-function imageTemplate (image) {
-  return `<div class="carousel">
-    <h3 class="image-title">${image.title}</h3>
-    <img src="${image.image_url}">
-    <p>Picture by: ${image.photographer_id}</p>
-  </div>`;
-}
-images.forEach(function (x) {
-  var node = $(".board");
-  var imageHTML = imageTemplate(x);
-  node.append(imageHTML);
 });
 
-
-
-<div class="price">
-	<p>$${item.price}</p>
-</div>
-*/
-
 function etsyTemplate(item) {
-  return `<div class="item-grid">
+  return `<div class="item-grid" title="${item.title}">
      <div class="pic">
-        <a href="${item.url}"><img src="${item.image}"></a>
+        <a href="${item.url}"><img src="${item.image}" alt="${item.title}"></a>
      </div>
      <div class="info">
-     	<p><a href="${item.url}">${item.title}</a></p>
-        <p><a href="${item.shop_url}">${item.shop_name}</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$${item.price}</p>
+     	<p class="title"><a href="${item.url}" alt="${item.title}">${item.title}</a></p>
+        <div class="meta-row">
+        	<a class="shop" href="${item.shop_url}">${item.shop_name}</a>
+        	<p class="price">$${item.price}</p>
+        </div>
      </div
    </div>`;
 }
-
 
 etsyItems.forEach(function(x) {
   var node = $('.flex-column');
