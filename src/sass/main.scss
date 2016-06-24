@@ -14,22 +14,30 @@ nav.content {
   height: 45px;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
+  font-size: 14px;
   ul {
     list-style: none;
     a {
       text-decoration: none;
       margin-left: 10px;
+      color: rgb(119, 119, 119);
     }
   }
 }
 .nav-left {
   float: left;
+  a {
+    color: orange;
+    font-size: 36px;
+  }
+
 }
 .nav-right {
   float: right;
   a {
     text-decoration: none;
     margin-left: 5px;
+    color: rgb(0, 146, 183);
   }
 }
 .container {
@@ -49,13 +57,22 @@ footer {
   height: 380px;
   background: white;
   margin-left: 35px;
+  font-size: 14px;
   // margin-top: 60px;
-  a {
+  p a {
     text-decoration: none;
     color: inherit;
   }
   ul {
     list-style: none;
+    li {
+      margin-top: 6px;
+    }
+    a {
+      text-decoration: none;
+      color: rgb(0, 146, 183);
+
+    }
   }
 
 }
@@ -66,17 +83,37 @@ footer {
   float: left;
   width: 260px;
   height: 250px;
-  border: .5px solid black;
+  // border: .5px solid black;
   margin: 10px;
   .pic {
     height: 203px;
-    border-bottom: .5px solid black;
+    // border-bottom: .5px solid black;
+    img {
+      width: 260px;
+      height: 203px;
+    }
   }
   .info {
     height: 47px;
+    font-size: 10px;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    display: inline;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .price {
+      // float: right;
+      display: inline;
+      color: green;
+    }
   }
 }
 .flex-column {
   -webkit-flex: 1;
           flex: 1;
+}
+.info:after {
+  content: '';
 }
