@@ -92,11 +92,32 @@ footer {
   height: 55px;
 }
 .item-grid {
+  position: relative;
   float: left;
   width: 260px;
   height: 250px;
   // border: .5px solid black;
   margin: 10px;
+  img.heart {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    z-index: -1;
+  }
+  &:hover img.heart {
+    z-index: 1;
+    color: white;
+  }
+  img.hamburger {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    z-index: -1;
+  }
+  &:hover img.hamburger {
+    z-index: 1;
+    color: white;
+  }
   .pic {
     height: 203px;
     // border-bottom: .5px solid black;
